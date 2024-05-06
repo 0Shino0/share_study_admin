@@ -72,10 +72,10 @@ export default defineComponent({
         "uploadVideo",
         "group-video",
 
-        "uploadImage",
-        "insertImage",
-        "deleteImage",
-        "group-image",
+        // "uploadImage",
+        // "insertImage",
+        // "deleteImage",
+        // "group-image",
 
         "fullScreen",
       ],
