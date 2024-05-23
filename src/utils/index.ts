@@ -26,7 +26,6 @@ type ThrottledFn<T extends (...args: any[]) => any> = (this: ThisParameterType<T
  * @description 节流
  */
 export function debounce<T extends (...args: any[]) => any>(fn: T, delay: number, immediate: boolean = false): DebouncedFn<T> {
-  // let timer: number | null = null;
   let timer: NodeJS.Timeout | null = null;
 
   /**
@@ -39,12 +38,14 @@ export function debounce<T extends (...args: any[]) => any>(fn: T, delay: number
     // if (timer !== null) clearTimeout(timer);
     timer && clearTimeout(timer)
     if (immediate) {
+      // 立即防抖
       const callNow = !timer;
       timer = setTimeout(() => {
         timer = null;
       }, delay);
       callNow && fn.apply(this, args);
     } else {
+      // 非立即防抖
       timer = setTimeout(() => {
         fn.apply(this, args);
       }, delay);
