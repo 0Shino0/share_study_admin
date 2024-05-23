@@ -565,7 +565,7 @@ export default defineComponent({
         </div>
 
         <!-- 更新消息 -->
-        <div class="upgrate-card">
+        <div class="upgrate-card" v-if="false">
           <div class="cart-container">
             <div class="upgrate-card-title">更新公告</div>
             <el-collapse v-model="activeName" accordion>
