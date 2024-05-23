@@ -29,7 +29,7 @@ import VueEmojis from "@/components/VueEmojis/index.vue";
 
 import { UserInfoMember } from "@/store/user";
 import { PostListMember } from "@/views/home/index.vue";
-import { getTokenData } from "@/utils";
+import { getTokenData,anchor } from "@/utils";
 
 // 规范评论表单
 export interface CommentFormMember {
@@ -288,6 +288,9 @@ export default defineComponent({
       sendId.value = id;
       sendName.value = name;
       isFocus.value = true;
+
+      console.log(123)
+      anchor('add-comment')
     };
     // 点击评论
     const commentSubmit = (formEl: FormInstance | undefined) => {
@@ -566,7 +569,7 @@ export default defineComponent({
           </div>
 
           <!-- 发布评论 -->
-          <div class="add-comment">
+          <div  class="add-comment">
             <div class="add-comment-header">
               <el-row>
                 <div class="current-avater">
@@ -802,7 +805,7 @@ export default defineComponent({
     </div>
 
     <!-- 发布评论 -->
-    <div class="add-comment" @focus="isFocus = true" tabindex="0">
+    <div id="add-comment" class="add-comment" @focus="isFocus = true" tabindex="0">
       <div class="add-comment-header">
         <div class="current-avater">
           <default-avatar
