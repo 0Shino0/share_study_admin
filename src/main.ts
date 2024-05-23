@@ -22,7 +22,10 @@ import '@/assets/icon/iconfont.css' // 图标字体相关
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // 图标
 import { ElMessage } from 'element-plus'
 
-
+// 全局样式
+import "@/styles/var.scss"; // 全局变量
+import "@/styles/global.scss"; // 全局样式
+import '@/assets/fonts/index.scss' // 字体文件
 
 // import eventBus from '@libs/eventBus' // Vue3事件解决方案
 

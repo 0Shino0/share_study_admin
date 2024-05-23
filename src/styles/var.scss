@@ -1,0 +1,344 @@
+// https://cn.windicss.org/utilities/general/colors.html
+:root {
+  // 常用尺寸
+  --w-space-xs: 8px;
+  --w-space-sm: 16px;
+  --w-space: 24px;
+  --w-space-lg: 32px;
+
+  --w-radius-xs: 4px;
+  --w-radius: 8px;
+  --w-radius-lg: 12px;
+  --w-radius-xl: 16px;
+
+  // 常用配色
+  --c-white: #f5f7f9;
+  --c-black: #2e2e2e;
+  --c-blue: #3b82f6;
+  --c-red: #ef4444;
+  --c-yellow: var(--color-text-primary);
+  // --c-green: var(--color-text-primary);
+  --c-green: #55a722;
+  --c-gray: #7e7e7e;
+  --c-gray-light: #535353;
+  --c-disable: rgba(0, 0, 0, 0.25);
+
+  // 常用元素色
+  --c-brand: var(--c-green);
+  --c-bg: #f5f7f9;
+  --c-bg-active: #eef6e8;
+  --c-text: #374151;
+  --c-tips: var(--c-gray);
+  --c-border: var(--c-gray);
+  --c-mask: rgba(0, 0, 0, 0.7);
+  --c-hover: var(--c-brand);
+
+  &.light {
+    --c-bg: var(--c-white);
+    --c-title: #e5e7eb;
+    --c-text: #e5e7eb;
+  }
+
+  &.dark {
+    --c-bg: #181818;
+    --c-title: #e5e7eb;
+    --c-text: #e5e7eb;
+  }
+
+  // 覆盖wangeditor
+  --w-e-textarea-bg-color: rgb(245, 247, 249);
+}
+
+/* 自定义主题 */
+:root {
+  --share-study-theme-font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Noto Sans", sans-serif, "Noto Color Emoji";
+
+  // 字体大小
+  --share-study-text-font-size: 16px;
+  --share-study-title-font-size: 24px;
+  --share-study-large-font-size: 36px;
+  --share-study-text-font-size-0: 12px;
+  --share-study-text-font-size-1: 14px;
+  --share-study-text-font-size-2: 16px;
+  --share-study-text-font-size-3: 18px;
+  --share-study-text-font-size-4: 20px;
+
+  --share-study-z-index-min: 0; // z-index规范
+  --share-study-z-index-0: 0; // z-index规范
+  --share-study-z-index-1: 10; // z-index规范
+  --share-study-z-index-2: 99; // z-index规范
+  --share-study-z-index-3: 999; // z-index规范
+  --share-study-z-index-4: 2001; // z-index规范 > el-loading-mask 2000
+  // --share-study-z-index-4: 9999; // z-index规范
+  --share-study-z-index-max: 99999; // z-index规范
+
+  // width height radius padding margin
+  // --nav-height: 48px;
+  --nav-height: 60px;
+  --nav-container-space: 10px; // nav与height之间的空隙
+  --share-study-round-border-radius: 50%; // 圆
+  --share-study-card-border-radius: 6px; // 0.375rem
+  --share-study-button-border-radius: 6px;
+  --share-study-tag-border-radius: 10px;
+  --share-study-toggle-border-radius: 30px;
+
+  // 过度
+  --share-study-transition-duration: 0.4s;
+  --share-study-transition-duration-2: 0.2s;
+  --share-study-transition-property-1: all;
+  --share-study-transition-property-2: border var(--share-study-transition-duration),
+    background var(--share-study-transition-duration), box-shadow var(--share-study-transition-duration);
+  --share-study-transition-property-3: color var(--share-study-transition-duration-2),
+    width var(--share-study-transition-duration-2), height var(--share-study-transition-duration-2);
+
+  --share-study-transition-1: var(--share-study-transition-property-1) var(--share-study-transition-duration);
+  --share-study-transition-2: var(--share-study-transition-property-2) var(--share-study-transition-duration); // 颜色
+  --share-study-transition-3: var(--share-study-transition-property-2), var(--share-study-transition-property-3); // 颜色 + 宽度
+
+  // color background
+  --share-study-c-transparency: rgba(0, 0, 0, 0); // 透明色
+  --share-study-c-white: #f5f7f9;
+  --share-study-c-white-2: #ffffff;
+  --share-study-c-white-3: #f7f8fa;
+  --share-study-c-white-4: #f5f5f5;
+  --share-study-c-white-5: #ececec;
+  --share-study-c-white-6: #fafafa;
+  --share-study-c-white-7: #e5eaf3;
+  --share-study-c-white-8: #e2e2e2;
+  --share-study-c-white-9: #e6edf3; // 用于标识 title
+  --share-study-c-white-10: #f1f4ef; // 用于标识 title
+  --share-study-c-white-11: #fbfbfd; // 用于标识 title
+
+  // --share-study-c-black: #181818;
+  // --share-study-c-black: #05010D;
+  --share-study-c-black: #010409;
+  --share-study-c-black-1: #2e2e2e;
+  --share-study-c-black-2: #0d1117;
+  --share-study-c-black-3: #160e23;
+  --share-study-c-black-4: #26303a;
+  --share-study-c-black-5: #001d25;
+  --share-study-c-black-6: #242424;
+  --share-study-c-black-7: #161b22;
+  --share-study-c-black-8: #020420;
+  --share-study-c-black-9: #18222c;
+  // --share-study-c-black-2: #2e2e2e;
+
+  --share-study-c-blue: #3b82f6;
+  --share-study-c-blue-2: #393f4e;
+  --share-study-c-blue-3: #9caec7;
+  --share-study-c-gray: #7e7e7e;
+  --share-study-c-gray-1: #535353;
+  --share-study-c-gray-2: #30363d;
+  --share-study-c-gray-3: #d1d5d9; // 用于标识 text 普通文本
+  --share-study-c-gray-4: #999;
+  --share-study-c-gray-5: #777;
+  --share-study-c-gray-6: #dcdfe6;
+  --share-study-c-gray-7: #4c4d4f;
+  --share-study-c-gray-8: #8a919f;
+  --share-study-c-gray-9: #8e8396;
+  --share-study-c-gray-10: #4b5158;
+
+  --share-study-c-green: #55a722;
+  --share-study-c-green-1: #cce5bd;
+  --share-study-c-green-2: #6fcb35;
+  --share-study-c-green-3: #55a822;
+  --share-study-c-green-4: #4abf8a;
+
+  --share-study-c-green-alpha-6f: #55a7223f;
+
+  --c-bg-active-light: #eef6e8;
+  --c-bg-active-dark: rgba(208, 215, 222, 0.32);
+
+  --border-color: var(--gray-09);
+  --border-color-2: var(--gray-08);
+  --border-active-color: var(--light-blue);
+  --border-primary-color: #0f59aa;
+
+  // --share-study-c-primary: rgb(56, 173, 122);
+  --share-study-c-primary: var(--share-study-c-green);
+
+  --share-study-c-text-light-1: var(--share-study-c-black-1);
+  --share-study-c-text-light-2: var(--share-study-c-black-2);
+  --share-study-c-text-light-3: var(--share-study-c-gray);
+  --share-study-c-text-light-4: var(--share-study-c-gray-1);
+
+  --share-study-c-text-dark-1: var(--share-study-c-white);
+  --share-study-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --share-study-c-text-dark-3: #a3a6ad;
+  --share-study-c-text-dark-5: #656d76;
+
+  --share-study-c-bg: #000;
+  --share-study-c-bg-active: rgba(208, 215, 222, 0.32);
+
+  // 渐变
+  --share-study-c-linear-gradient: linear-gradient(
+    to bottom,
+    var(--share-study-c-green-1),
+    var(--share-study-c-white-10)
+  );
+  --share-study-c-linear-gradient-primary: linear-gradient(
+    to bottom,
+    var(--share-study-c-green-2),
+    var(--share-study-c-green-3)
+  );
+}
+
+/* semantic color variables for this project */
+// :root {
+:root.light {
+  // color
+  --color-background: var(--share-study-c-white);
+  --color-background-2: var(--share-study-c-white-4);
+  --color-background-3: var(--share-study-c-white-3);
+  --color-background-4: var(--share-study-c-white-5);
+  --color-background-5: var(--share-study-c-gray-9);
+  --color-background-6: var(--share-study-c-white-6);
+  --color-background-7: var(--share-study-c-white-11);
+
+  --color-background-transparent: #ffffff0f; // --share-study-c-white
+  --color-background-transparent-6: #fafafaaf; // --share-study-c-white-6
+  --color-background-transparent-7: #fbfbfdef; // --share-study-c-white-11
+
+  --color-bg-card: var(--share-study-c-white-2);
+  --color-bg-card-2: var(--share-study-c-white-3);
+  --color-bg-card-3: var(--c-bg-active-light);
+  --color-bg-layout: var(--share-study-c-black-4);
+
+  --color-bg-active: var(--c-bg-active);
+  --color-background-2-hover: var(--share-study-c-white-8);
+
+  --color-heading: var(--share-study-c-primary);
+  --color-text-primary: var(--c-green);
+  --color-text: var(--share-study-c-text-light-1); // 黑/白色 原--c-black
+  --color-text-2: var(--share-study-c-text-light-2);
+  --color-text-3: var(--share-study-c-gray); // 偏向灰色 原--c-gray
+  --color-text-4: var(--share-study-c-text-light-4); // 偏向灰色 原--c-gray-light
+  --color-text-5: var(--share-study-c-gray-4);
+  --color-text-6: var(--share-study-c-gray-9);
+  --color-text-7: var(--share-study-c-text-light-1); // 普通文本
+
+  --color-title: var(--share-study-c-text-light-1); // 标题
+
+  --color-text-5-hover: var(--share-study-c-gray-5);
+
+  --color-border: var(--share-study-c-white-3);
+  --color-border-2: var(--share-study-c-gray-6);
+  --color-border-3: var(--share-study-c-gray-10);
+  --color-border-4: var(--share-study-c-white-5);
+
+  // shadow
+  --color-shadow-1: #0000000f;
+  --color-shadow-2: #0000000f;
+  // --color-shadow-3: #000000Ef;
+  // --color-shadow-4: #0000000f;
+
+  --share-study-card-shadow: 5px 5px 10px var(--color-shadow-1), -5px -5px 10px var(--color-shadow-2);
+}
+
+// :root body[theme-mode="dark"] {
+:root.dark {
+  // color
+  --color-background: var(--share-study-c-black);
+  --color-background-2: var(--share-study-c-blue-2);
+  // --color-background-3: var(--share-study-c-black);
+  --color-background-3: var(--share-study-c-black-7);
+  --color-background-4: var(--share-study-c-black-6);
+  --color-background-5: var(--share-study-c-white-7);
+  --color-background-6: var(--share-study-c-black);
+  --color-background-7: var(--share-study-c-black);
+
+  --color-background-transparent: #010409bf; // --share-study-c-black
+  --color-background-transparent-6: #010409df; // --share-study-c-black
+  --color-background-transparent-7: #010409df; // --share-study-c-black
+
+  --color-bg-card: var(--share-study-c-black-2);
+  --color-bg-card-2: var(--share-study-c-gray-2);
+  --color-bg-card-3: var(--share-study-c-black-9);
+
+  --color-bg-layout: var(--share-study-c-black);
+
+  --color-bg-active: var(--c-bg-active-dark);
+  --color-background-2-hover: var(--share-study-c-blue-3);
+
+  --color-heading: var(--share-study-c-primary);
+  --color-text-primary: var(--c-green);
+  --color-text: var(--share-study-c-text-dark-1); // 黑/白色 原--c-black
+  --color-text-2: var(--share-study-c-text-dark-2);
+  --color-text-3: var(--share-study-c-text-dark-3); // 偏向灰色 原--c-gray
+  --color-text-4: var(--share-study-c-text-dark-3); // 偏向灰色 原--c-gray-light
+  --color-text-5: var(--share-study-c-blue-3);
+  --color-text-6: var(--share-study-c-gray-9);
+  --color-text-7: var(--share-study-c-gray-3); // 普通文本
+
+  --color-title: var(--share-study-c-white-9); // 标题
+
+  --color-text-5-hover: var(--share-study-c-black-5);
+
+  --color-border: var(--share-study-c-gray-2);
+  --color-border-2: var(--share-study-c-gray-7);
+  --color-border-3: var(--share-study-c-gray-7);
+  --color-border-4: var(--share-study-c-white-5);
+
+  // color shadow
+  --color-shadow-1: #0a0a0a;
+  --color-shadow-2: #262626;
+
+  // shadow
+  --share-study-card-shadow: 5px 5px 10px var(--color-shadow-1), -5px -5px 10px var(--color-shadow-2);
+}
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+//   margin: 0;
+//   position: relative;
+//   font-weight: normal;
+// }
+
+// 检测用户是否有将系统的主题色设置为亮色或者暗色 的 CSS 媒体特性 // 放在light和dark之上防止在系统暗色主题下，切换主题按钮失效
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     // color
+//     --color-background: var(--share-study-c-black);
+//     --color-background-2: var(--share-study-c-blue-2);
+//     // --color-background-3: var(--share-study-c-black);
+//     --color-background-3: var(--share-study-c-black-7);
+//     --color-background-4: var(--share-study-c-black-6);
+//     --color-background-5: var(--share-study-c-white-7);
+
+//     --color-bg-card: var(--share-study-c-black-2);
+//     --color-bg-card-2: var(--share-study-c-gray-2);
+
+//     --color-bg-layout: var(--share-study-c-black);
+
+//     --color-bg-active: var(--c-bg-active-dark);
+//     --color-background-2-hover: var(--share-study-c-blue-3);
+
+//     --color-heading: var(--share-study-c-primary);
+//     --color-text-primary: var(--c-green);
+//     --color-text: var(--share-study-c-text-dark-1); // 黑/白色 原--c-black
+//     --color-text-2: var(--share-study-c-text-dark-2);
+//     --color-text-3: var(--share-study-c-text-dark-3); // 偏向灰色 原--c-gray
+//     --color-text-4: var(--share-study-c-text-dark-3); // 偏向灰色 原--c-gray-light
+//     --color-text-5: var(--share-study-c-blue-3);
+//     --color-text-6: var(--share-study-c-gray-9);
+//     --color-text-7: var(--share-study-c-gray-3); // 普通文本
+
+//     --color-title: var(--share-study-c-white-9); // 标题
+
+//     --color-text-5-hover: var(--share-study-c-black-5);
+
+//     --color-border: var(--share-study-c-gray-2);
+//     --color-border-2: var(--share-study-c-gray-7);
+//     --color-border-3: var(--share-study-c-gray-7);
+
+//     // color shadow
+//     --color-shadow-1: #0a0a0a;
+//     --color-shadow-2: #262626;
+
+//     // shadow
+//     --share-study-card-shadow: 5px 5px 10px var(--color-shadow-1), -5px -5px 10px var(--color-shadow-2);
+//   }
+// }

@@ -1,0 +1,263 @@
+.article-content {
+  .ql-editor {
+    word-break: break-word;
+    line-height: 1.75;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  // 标题样式 H1~6
+  .ql-editor h1,
+  .ql-editor h2,
+  .ql-editor h3,
+  .ql-editor h4,
+  .ql-editor h5,
+  .ql-editor h6 {
+    line-height: 1.5;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  .ql-editor h1 {
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 5px;
+  }
+
+  .ql-editor h2 {
+    font-size: 22px;
+    line-height: 34px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border-4);
+  }
+
+  .ql-editor h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .ql-editor h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .ql-editor h5 {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .ql-editor h6 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .ql-editor p {
+    line-height: inherit;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  // 无序有序列表
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  .ql-editor ol,
+  .ql-editor ul {
+    padding-left: 28px;
+  }
+  .ql-editor ol li,
+  .ql-editor ul li {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: inherit;
+  }
+  .ql-editor > ul > li:before,
+  .ql-editor > ol > li:before {
+    display: none;
+  }
+  .ql-editor > ul > li::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+  }
+
+  // 代码框
+  .ql-editor code,
+  .ql-editor pre {
+    font-family:
+      Menlo,
+      Monaco,
+      Consolas,
+      Courier New,
+      monospace;
+  }
+
+  // 图片默认居中
+  .ql-editor p img {
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  // .ql-editor p,
+  // .ql-editor pre,
+  // .ql-editor blockquote {
+  // }
+}
+
+.markdown-body {
+  // .ql-editor {
+  word-break: break-word;
+  line-height: 1.75;
+  font-weight: 400;
+  font-size: 16px;
+  // }
+
+  // 标题样式 H1~6
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.5;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 34px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border-4);
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  h5 {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  p {
+    line-height: inherit;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  // 无序有序列表
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  ol,
+  ul {
+    padding-left: 28px;
+  }
+  ol li,
+  ul li {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: inherit;
+  }
+  > ul > li:before,
+  > ol > li:before {
+    display: none;
+  }
+  > ul > li::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+  }
+
+  // 代码框
+  code,
+  pre {
+    font-family:
+      Menlo,
+      Monaco,
+      Consolas,
+      Courier New,
+      monospace;
+  }
+
+  // 图片默认居中
+  p img {
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  //  p,
+  //  pre,
+  //  blockquote {
+  // }
+}

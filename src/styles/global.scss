@@ -1,0 +1,45 @@
+
+
+html,
+body {
+  font-family: var(--share-study-theme-font-family);
+  // --el-font-family: var(--share-study-theme-font-family); // 修改element 字体族
+  font-variant: tabular-nums;
+
+  input,
+  textarea,
+  button {
+    // 部分标签单独设置，防止不生效
+    font-family: var(--share-study-theme-font-family);
+  }
+
+  // html,body{
+  //   height: 100%;
+  // }
+
+  // 解决滚动条占据空间的问题，兼容ie
+  // 因为100vw是window的宽度，其实就是window.innerWidth, 而容器的宽度100%就是除了滚动条的可用宽度，因此在没有滚动条时候calc(100% - 100vw)就是0，触发滚动条时候其值为负的滚动条宽度，我们将其赋值给容器的margin-right，即可巧妙补偿这个宽度的挤压，在滚动条存在的情况下容器宽度仍然占据整个视口的宽度。
+  #app {
+    margin-right: calc(100% - 100vw);
+    // padding: 17px;
+    // overflow-x: hidden;
+  }
+
+  a:hover {
+    // a标签默认hover
+    color: var(--c-green);
+  }
+
+  // 清除ul、ol默认样式
+  ul,
+  ol {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  // 字体高亮
+  // .highlight {
+  //   color: var(--c-green);
+  // }
+}
