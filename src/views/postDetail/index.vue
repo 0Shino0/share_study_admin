@@ -907,7 +907,9 @@ export default defineComponent({
             </div>
             <!-- 所属高校 -->
             <div class="comment-college">
-              {{ commentItem.belongCollege }}
+              <span>
+                {{ commentItem.belongCollege }}
+              </span>
             </div>
           </div>
           <!-- 帖子信息 -->
@@ -1032,7 +1034,8 @@ export default defineComponent({
 
         // 高校
         .post-college {
-          font-size: 8px;
+          // font-size: 8px;
+          font-size: 12px;
           margin-top: 2px;
         }
       }
@@ -1321,15 +1324,21 @@ export default defineComponent({
           // 姓名
           .comment-name {
             border-right: 1px solid #909399;
-            padding-right: 10px;
+            padding-right: 4px;
             font-size: 14px;
+            line-height: 21.6px;
           }
 
           // 高校
           .comment-college {
-            padding-left: 5px;
-            font-size: 8px;
-            margin-top: 2px;
+            line-height: 20px;
+            span{
+              padding-left: 5px;
+              margin-top: 2px;
+              // font-size: 8px;
+              font-size: 12px;
+              line-height: 20px;
+            }
           }
         }
 
@@ -1340,7 +1349,8 @@ export default defineComponent({
           white-space: pre-line; // 遇到/n 或者 <br/>自动换行
 
           span {
-            font-size: 12px;
+            // font-size: 12px;
+            font-size: 14px;
           }
         }
 
@@ -1349,7 +1359,7 @@ export default defineComponent({
 
           // 附件下载
           .comment-download {
-            margin: 20px 0px 0px 10px;
+            margin: 10px 0px 10px 10px;
             font-size: 12px;
 
             .download {
@@ -1363,15 +1373,15 @@ export default defineComponent({
 
           // 回复
           .add-comment-item {
-            margin: 20px 0px 0px 10px;
-            font-size: 12px;
+            margin: 10px 0px 10px 10px;
+            font-size: 14px;
             cursor: pointer;
             color: #909399;
 
             // .icon-message {}
 
             .add-action {
-              font-size: 10px;
+              font-size: 12px;
             }
           }
 

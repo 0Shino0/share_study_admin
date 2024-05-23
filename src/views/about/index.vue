@@ -991,7 +991,8 @@ export default defineComponent({
                 // 高校
                 .post-college {
                   padding-left: 5px;
-                  font-size: 8px;
+                  // font-size: 8px;
+                  font-size: 12px;
                   margin-top: 2px;
                 }
               }

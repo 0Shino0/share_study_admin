@@ -188,12 +188,12 @@ export default defineComponent({
   // flex-wrap: wrap;
   // border-radius: 0.5rem;
   // background-color: #eee;
+  // width: 300px;
   border-radius: 0.2rem;
   background-color: #f9fbff;
   box-sizing: border-box;
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
   padding: 0.25rem;
-  // width: 300px;
   font-size: 14px;
 }
 
