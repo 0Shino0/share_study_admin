@@ -70,6 +70,7 @@ export default defineComponent({
     const $message: any = inject("$message");
 
     const insertHtmlRef = ref();
+    const addCommentRef = ref();
     // loading
     const skeletonLoading = ref<boolean>(true);
     // 帖子信息相关
@@ -231,6 +232,11 @@ export default defineComponent({
       // console.log(collectStatus.value);
       // // console.log(this.postId);
     };
+    // const addCommentFocus = ( ) => {
+    //   isFocus.value = false;
+    //   isEmojis.value = false; //
+    //   console.log(isFocus.value)
+    // }
     // 聚焦输入框
     const inputFocus = () => {
       isFocus.value = true;
@@ -287,9 +293,10 @@ export default defineComponent({
     const commentOther = (id: string, name: string) => {
       sendId.value = id;
       sendName.value = name;
-      isFocus.value = true;
+      isFocus.value = false;
+      addCommentRef.value.focus()
 
-      console.log(123)
+      // console.log(addCommentRef.value)
       anchor('add-comment')
     };
     // 点击评论
@@ -459,6 +466,7 @@ export default defineComponent({
       collectId,
       userInfo,
       insertHtmlRef,
+      addCommentRef,
       formRef,
 
       // 计算属性
@@ -468,6 +476,7 @@ export default defineComponent({
       toUpdatePost,
       isFileType,
       getParams,
+      // addCommentFocus,
       inputFocus,
       handleCollect,
       delComment,
@@ -805,7 +814,7 @@ export default defineComponent({
     </div>
 
     <!-- 发布评论 -->
-    <div id="add-comment" class="add-comment" @focus="isFocus = true" tabindex="0">
+    <div id="add-comment" class="add-comment"  tabindex="0">
       <div class="add-comment-header">
         <div class="current-avater">
           <default-avatar
@@ -822,6 +831,7 @@ export default defineComponent({
               type="textarea"
               v-model="form.content"
               @focus="inputFocus"
+              ref="addCommentRef"
             ></el-input>
           </el-form-item>
         </el-form>
